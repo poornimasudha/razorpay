@@ -22,6 +22,11 @@ Route::get('/', function () {
 
 
 
+Route::get('/poornima', function () {
+    return view('poornima');
+});
+Route::post('/poornima/subscribe',[\App\Http\Controllers\PoornimaController::class,'subscribe']);
+
 
 Route::get('razorpay-payment', [RazorpayPaymentController::class, 'index']);
 
