@@ -7,6 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSRF Token -->
+    <style>
+        .hide{
+            display: none;
+        }
+    </style>
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -42,9 +47,10 @@
                 plan: $("#plans").val(),
             },
             success: function (response) {
-                console.log(response);
-/*                 var options = {    "key": "key_id",    "subscription_id": "sub_HRDJGS6oXIECrs",
-                     "name": "Acme Corp.",    "description": "Monthly Test Plan",    "image": "/your_logo.png",    "handler": function(response) {      alert(response.razorpay_payment_id);    },
+                $("#rzp-button1").removeClass('hide')
+                /* var options = {    "key": "key_id",    "subscription_id": "sub_HRDJGS6oXIECrs",
+                     "name": "Acme Corp.",    "description": "Monthly Test Plan",    "image": "/your_logo.png",    "handler": function(response) {
+                     alert(response.razorpay_payment_id);    },
                      "prefill": {      "name": "Gaurav Kumar",      "email": "poornimamadappally@gmail.com",      "contact": "9496766575"    },
                      "notes": {      "note_key_1": "Tea. Earl Grey. Hot",      "note_key_2": "Make it so."    },    "theme": {      "color": "#F37254"    }  };var rzp1 = new Razorpay(options);
                     document.getElementById('rzp-button1').onclick = function(e) {  rzp1.open();  e.preventDefault();}*/

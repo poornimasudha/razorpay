@@ -17,6 +17,6 @@ class PoornimaController extends Controller
                 'total_count' => 6,
             )
         );
-        return $subscription;
+        return response()->json($subscription);
     }
 }
